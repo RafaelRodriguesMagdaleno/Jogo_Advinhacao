@@ -15,23 +15,23 @@ void main() {
     for(int i = 1; i <= NUMERO_DE_TENTATIVAS; i ++) {
         printf("Qual vai ser o seu %i° chute ? ", i);
         scanf("%i", &chute);
+        if(chute < 0) {
+            printf("Você não pode chutar números negativos\n");
+            i--;
+            continue;
+        }
         printf("Seu %i° chute foi %i\n", i ,chute);
 
         int acertou = chute == numero_secreto;
         int maior = chute > numero_secreto;
 
         if(acertou) {
-
             printf("Parabéns! Você acertou!\n");
             printf("Jogue de novo, você é um bom jogador!\n");
             break;
-
         }else if(maior){
-
             printf("Seu chute foi maior do que o número secreto!\n");
-
         }else {
-
             printf("Seu chute foi menor do que o número secreto!\n");
         }
     }
