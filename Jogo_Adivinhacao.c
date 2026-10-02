@@ -13,7 +13,7 @@ void main() {
     int chute;
     int numero_secreto = 42;
     //Use quando for usar o While int tentativas = 1;
-    int pontos = 1000;
+    double pontos = 1000;
 
     for(int i = 1; i <= NUMERO_DE_TENTATIVAS; i ++) {
         printf("Qual vai ser o seu %i° chute ? ", i);
@@ -27,7 +27,7 @@ void main() {
         int acertou = chute == numero_secreto;
         int maior = chute > numero_secreto;
 
-        int pontos_perdidos = (chute - numero_secreto) / 2;
+        double pontos_perdidos = ((double)chute - (double)numero_secreto) / 2;
         pontos = pontos - pontos_perdidos;
 
         if(acertou) {
@@ -42,7 +42,7 @@ void main() {
     }
 
     printf("Fim do Jogo!\n");
-    printf("Você fez %i pontos\n", pontos);
+    printf("Você fez %.2f pontos\n", pontos);
     printf("Obrigado por jogar!\n");
 
 
