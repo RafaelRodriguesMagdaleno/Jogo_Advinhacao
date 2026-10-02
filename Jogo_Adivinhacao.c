@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <locale.h>
 #define NUMERO_DE_TENTATIVAS 3
 
@@ -27,7 +28,7 @@ void main() {
         int acertou = chute == numero_secreto;
         int maior = chute > numero_secreto;
 
-        double pontos_perdidos = ((double)chute - (double)numero_secreto) / 2;
+        double pontos_perdidos = abs((double)chute - (double)numero_secreto) / 2.0;
         pontos = pontos - pontos_perdidos;
 
         if(acertou) {
