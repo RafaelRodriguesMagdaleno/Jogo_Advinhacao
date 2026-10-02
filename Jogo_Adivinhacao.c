@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <time.h>
 #define NUMERO_DE_TENTATIVAS 3
 
 void main() {
@@ -12,9 +13,12 @@ void main() {
     printf("************************************\n");
 
     int chute;
-    int numero_secreto = 42;
     //Use quando for usar o While int tentativas = 1;
     double pontos = 1000;
+    int segundos = time(0);
+    srand(segundos);
+    int numero_grande = rand();
+    int numero_secreto = numero_grande % 100;
 
     for(int i = 1; i <= NUMERO_DE_TENTATIVAS; i ++) {
         printf("Qual vai ser o seu %i° chute ? ", i);
