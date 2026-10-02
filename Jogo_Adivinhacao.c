@@ -19,12 +19,29 @@ void main() {
     srand(segundos);
     int numero_grande = rand();
     int numero_secreto = numero_grande % 100;
+    int nivel;
+    int total_de_tentativas;
 
-    for(int i = 1; i <= NUMERO_DE_TENTATIVAS; i ++) {
+    printf("Qual o nível de dificuldade?\n");
+    printf("(1) Fácil (2) Médio (3) Difícil\n\n");
+    printf("Escolha: ");
+    scanf("%i", &nivel);
+
+    if(nivel == 1) {
+        total_de_tentativas = 20;
+    }else if(nivel == 2) {
+        total_de_tentativas = 15;
+    }else {
+        total_de_tentativas = 6;
+    }
+
+    for(int i = 1; i <= total_de_tentativas; i ++) {
+        printf("Tentativa %i de %i\n", i,total_de_tentativas);
         printf("Qual vai ser o seu %i° chute ? ", i);
         scanf("%i", &chute);
         if(chute < 0) {
             printf("Você não pode chutar números negativos\n");
+            i--;
             continue;
         }
         printf("Seu %i° chute foi %i\n", i ,chute);
