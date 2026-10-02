@@ -27,12 +27,16 @@ void main() {
     printf("Escolha: ");
     scanf("%i", &nivel);
 
-    if(nivel == 1) {
-        total_de_tentativas = 20;
-    }else if(nivel == 2) {
-        total_de_tentativas = 15;
-    }else {
-        total_de_tentativas = 6;
+    switch(nivel) {
+        case 1:
+            total_de_tentativas = 20;
+            break;
+        case 2:
+            total_de_tentativas = 15;
+            break;
+        case 3:
+            total_de_tentativas = 6;
+            break;
     }
 
     for(int i = 1; i <= total_de_tentativas; i ++) {
