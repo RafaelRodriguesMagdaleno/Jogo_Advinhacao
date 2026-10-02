@@ -21,6 +21,7 @@ void main() {
     int numero_secreto = numero_grande % 100;
     int nivel;
     int total_de_tentativas;
+    int acertou = 0;
 
     printf("Qual o nível de dificuldade?\n");
     printf("(1) Fácil (2) Médio (3) Difícil\n\n");
@@ -34,7 +35,7 @@ void main() {
         case 2:
             total_de_tentativas = 15;
             break;
-        case 3:
+        default:
             total_de_tentativas = 6;
             break;
     }
@@ -67,9 +68,14 @@ void main() {
         }
     }
 
+    printf("************************************\n");
     printf("Fim do Jogo!\n");
+    if(!acertou) {
+        printf("Você perdeu! Tente novamente\n");
+    }
     printf("Você fez %.2f pontos\n", pontos);
     printf("Obrigado por jogar!\n");
+    printf("************************************\n");
 
 
 }
