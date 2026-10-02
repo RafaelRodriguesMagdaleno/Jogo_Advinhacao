@@ -12,9 +12,9 @@ void main() {
     int numero_secreto = 42;
 
     for(int i = 1; i <= 3; i ++) {
-        printf("Qual vai ser o seu chute ? ");
+        printf("Qual vai ser o seu %i° chute ? ", i);
         scanf("%i", &chute);
-        printf("Seu chute foi %i\n", chute);
+        printf("Seu %i° chute foi %i\n", i ,chute);
 
         int acertou = chute == numero_secreto;
 
@@ -22,6 +22,7 @@ void main() {
 
             printf("Parabéns! Você acertou!\n");
             printf("Jogue de novo, você é um bom jogador!\n");
+            break;
 
         }else {
 
