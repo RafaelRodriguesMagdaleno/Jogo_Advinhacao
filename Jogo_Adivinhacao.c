@@ -51,15 +51,13 @@ void main() {
         }
         printf("Seu %i° chute foi %i\n", i ,chute);
 
-        int acertou = chute == numero_secreto;
+        acertou = chute == numero_secreto;
         int maior = chute > numero_secreto;
 
-        double pontos_perdidos = abs((double)chute - (double)numero_secreto) / 2.0;
+        double pontos_perdidos = abs(chute - numero_secreto) / 2.0;
         pontos = pontos - pontos_perdidos;
 
         if(acertou) {
-            printf("Parabéns! Você acertou!\n");
-            printf("Jogue de novo, você é um bom jogador!\n");
             break;
         }else if(maior){
             printf("Seu chute foi maior do que o número secreto!\n");
@@ -70,8 +68,13 @@ void main() {
 
     printf("************************************\n");
     printf("Fim do Jogo!\n");
-    if(!acertou) {
+
+    if(acertou) {
+        printf("Parabéns! Você acertou!\n");
+        printf("Jogue de novo, você é um bom jogador!\n");
+    }else {
         printf("Você perdeu! Tente novamente\n");
+
     }
     printf("Você fez %.2f pontos\n", pontos);
     printf("Obrigado por jogar!\n");
