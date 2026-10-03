@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <time.h>
-#define NUMERO_DE_TENTATIVAS 3
+#define PONTOS_INICIAIS 1000
+#define TENTATIVAS_MODO_FACIL 20
+#define TENTATIVAS_MODO_MEDIO 15
+#define TENTATIVAS_MODO_DIFICIL 6
 
 void main() {
 
@@ -21,8 +24,8 @@ void main() {
 
 	//Declarando as variáveis
     int chute;
+    double pontos = PONTOS_INICIAIS;
     //Use quando for usar o While int tentativas = 1;
-    double pontos = 1000;
     int segundos = time(0);
     int intervalo_inicial;
     int intervalo_final;
@@ -48,13 +51,13 @@ void main() {
     //Condições para a dificuldade
     switch(nivel) {
         case 1:
-            total_de_tentativas = 20;
+            total_de_tentativas = TENTATIVAS_MODO_FACIL;
             break;
         case 2:
-            total_de_tentativas = 15;
+            total_de_tentativas = TENTATIVAS_MODO_MEDIO;
             break;
         default:
-            total_de_tentativas = 6;
+            total_de_tentativas = TENTATIVAS_MODO_DIFICIL;
             break;
     }
 
