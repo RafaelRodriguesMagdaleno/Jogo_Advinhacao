@@ -24,14 +24,22 @@ void main() {
     //Use quando for usar o While int tentativas = 1;
     double pontos = 1000;
     int segundos = time(0);
-    srand(segundos);
-    int numero_grande = rand();
-    int numero_secreto = numero_grande % 100;
+    int intervalo_inicial;
+    int intervalo_final;
     int nivel;
     int total_de_tentativas;
     int acertou = 0;
 
     //interação com o usuário
+    printf("Digite o começo do intervalo de escolha dos números : ");
+    scanf("%i", &intervalo_inicial);
+    printf("Digite o número final de até aonde vai o intervalo : ");
+    scanf("%i", &intervalo_final);
+
+    srand(time(0));
+    int tamanho = intervalo_final - intervalo_inicial + 1;
+    int numero_secreto = intervalo_inicial + rand() % tamanho;
+
     printf("Qual o nível de dificuldade?\n");
     printf("(1) Fácil (2) Médio (3) Difícil\n\n");
     printf("Escolha: ");
