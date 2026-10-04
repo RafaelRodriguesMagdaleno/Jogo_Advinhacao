@@ -6,7 +6,7 @@ Jogo de adivinhação em C para terminal. O código foi escrito acompanhando o l
 
 - [Sobre o projeto](#sobre-o-projeto)
 - [Como jogar](#como-jogar)
-- [Melhorias implementadas](#melhorias-implementadas)
+- [Desafios implementados](#desafios-implementados)
 - [Pré-requisitos](#pré-requisitos)
 - [Como compilar e executar](#como-compilar-e-executar)
   - [Terminal (GCC)](#terminal-gcc)
@@ -22,7 +22,7 @@ Jogo de adivinhação em C para terminal. O código foi escrito acompanhando o l
 
 ## Sobre o projeto
 
-Este repositório registra meus estudos da linguagem C. O jogo é o primeiro dos três projetos propostos no livro e foi implementado seguindo os capítulos passo a passo. O projeto e o código original são de autoria de Maurício Aniche. Sobre essa base, acrescentei algumas funcionalidades próprias, descritas em [Melhorias implementadas](#melhorias-implementadas).
+Este repositório registra meus estudos da linguagem C. O jogo é o primeiro dos três projetos propostos no livro e foi implementado seguindo os capítulos passo a passo. O projeto e o código original são de autoria de Maurício Aniche. Além do código desenvolvido nos capítulos, implementei os desafios opcionais propostos pelo autor, descritos em [Desafios implementados](#desafios-implementados).
 
 O programa sorteia um número secreto dentro de um intervalo definido pelo jogador, que precisa descobri-lo dentro de um número limitado de tentativas. A cada chute, o jogo informa se o valor foi maior ou menor que o número secreto.
 
@@ -48,11 +48,11 @@ O jogador começa cada partida com 1000 pontos. A cada chute, perde metade da di
 
 Chutes negativos e chutes iguais ao imediatamente anterior são rejeitados: o jogo exibe um aviso e a tentativa não é consumida.
 
-## Melhorias implementadas
+## Desafios implementados
 
-As funcionalidades abaixo não fazem parte do código do livro e foram acrescentadas como exercício:
+As funcionalidades abaixo foram propostas pelo autor no livro como desafios opcionais, cuja implementação fica a critério do leitor. O código desenvolvido nos capítulos não as inclui; a implementação a seguir é minha:
 
-- **Intervalo personalizado:** o jogador define o início e o fim do intervalo em que o número secreto é sorteado. Na versão original, o intervalo era fixo, de 0 a 99.
+- **Intervalo personalizado:** o jogador define o início e o fim do intervalo em que o número secreto é sorteado. Na versão desenvolvida nos capítulos, o intervalo era fixo, de 0 a 99.
 - **Jogar novamente:** ao final de cada partida, o jogador escolhe entre iniciar outra ou encerrar o jogo, sem precisar executar o programa de novo. Cada nova partida recomeça com a pontuação inicial e um novo número secreto.
 - **Bloqueio de chute repetido:** o mesmo número não pode ser chutado duas vezes seguidas. O jogo guarda apenas o último chute, avisa o jogador e não contabiliza a tentativa.
 - **Constantes para as regras do jogo:** a pontuação inicial e o número de tentativas de cada nível de dificuldade são definidos com `#define`, em vez de valores soltos no código.
@@ -229,5 +229,5 @@ ANICHE, Maurício. [Introdução à programação em C: Os primeiros passos de u
 
 ## Créditos
 
-- Projeto e código original: [Maurício Aniche](https://www.linkedin.com/in/mauricioaniche/), no livro [Introdução à programação em C](https://www.casadocodigo.com.br/products/livro-introducao-c)
-- Implementação para estudo e melhorias: [Rafael Rodrigues Magdaleno](https://github.com/RafaelRodriguesMagdaleno) ([LinkedIn](https://linkedin.com/in/rafael-rodrigues-magdaleno-5476a0271))
+- Projeto, código original e proposta dos desafios: [Maurício Aniche](https://www.linkedin.com/in/mauricioaniche/), no livro [Introdução à programação em C](https://www.casadocodigo.com.br/products/livro-introducao-c)
+- Implementação para estudo, incluindo os desafios: [Rafael Rodrigues Magdaleno](https://github.com/RafaelRodriguesMagdaleno) ([LinkedIn](https://linkedin.com/in/rafael-rodrigues-magdaleno-5476a0271))
