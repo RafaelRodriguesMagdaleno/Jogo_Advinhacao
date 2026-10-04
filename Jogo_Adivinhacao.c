@@ -67,6 +67,8 @@ void main() {
 
         }
 
+        int ultimo_chute = -1;
+
         //Começou o jogo
         for(int i = 1; i<= total_de_tentativas; i++) {
             printf("Tentativa %i de %i\n", i, total_de_tentativas);
@@ -77,6 +79,12 @@ void main() {
                 i--;
                 continue;
             }
+            if(chute == ultimo_chute) {
+                printf("Você não pode chutar o mesmo número duas vezes seguidas\n");
+                i--;
+                continue;
+            }
+            ultimo_chute = chute;
             printf("Seu %i° chute foi %i\n", i, chute);
 
             acertou = chute == numero_secreto;
