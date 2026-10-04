@@ -92,7 +92,7 @@ void main() {
             }else if(maior){
                 printf("Seu chute foi maior do que o número secreto!\n");
             }else{
-                printf("Seu chute foi menor do que o número secreto\n");
+                printf("Seu chute foi menor do que o número secreto!\n");
             }
         }
 
@@ -132,7 +132,7 @@ void main() {
         printf("Obrigado por jogar!\n");
         printf("************************************\n");
         printf("Deseja jogar novamente ? \n");
-        printf("[1] - Sim, [2] - Não\n");
+        printf("[1] - Sim [2] - Não\n");
         printf("Escolha : ");
         scanf("%i", &escolha_jogo);
         if(escolha_jogo == 1) {
